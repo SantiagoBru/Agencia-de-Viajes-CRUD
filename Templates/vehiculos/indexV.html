@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+  </head>
+  <body>
+
+  <table class="table table-light">
+    <thead class="thead-light">
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Imagen</th>
+        <th>Precio por dia</th>
+        <th>Capacidad de personas</th>
+        <th>Tipo de caja</th>
+        <th>Cantidad de puertas</th>
+        <th>Aire Acondionado</th>
+        <th>Kilometraje</th>
+        <th>Cantidad de Equipaje</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for vehiculo in vehiculos %}
+      <tr>
+        <td>{{vehiculo[0] }}</td>
+        <td>{{vehiculo[1] }}</td>
+        <td>{{vehiculo[2] }}</td>
+
+        <td>
+          <img class="img-thumbnail" width="100" src="uploads/{{vehiculo[3] }}" att="">
+        </td>
+
+        <td>{{vehiculo[4] }}</td>
+        <td>{{vehiculo[5] }}</td>
+        <td>{{vehiculo[6] }}</td>
+        <td>{{vehiculo[7] }}</td>
+        <td>{{vehiculo[8] }}</td>
+        <td>{{vehiculo[9] }}</td>
+        <td>{{vehiculo[10] }}</td>
+        <td>{{vehiculo[11] }}</td>
+        <td> <a href="/editV/{{vehiculo[0]}}">Editar</a>  |
+          <a href="/destroy/{{vehiculo[0]}}">Eliminar</a> 
+        </td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+  </body>
+</html>
+

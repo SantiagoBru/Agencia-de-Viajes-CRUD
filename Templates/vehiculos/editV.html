@@ -1,0 +1,44 @@
+{% for vehiculo in vehiculos %}
+
+<form method="post" action="/update" enctype="multipart/form-date">
+
+    <input type="text" value="{{vehiculo[0] }}" name="txtID" id= "txtID">
+    <br/>
+    Nombre:
+    <input type="text" value="{{vehiculo[1] }}" name="txtNombre" id= "txtNombre">
+    <br>
+    Marca:
+    <input type="text" value="{{vehiculo[2] }}" name="txtApellido" id= "txtApellido">
+    <br>
+    Modelo:
+    <input type="text" value="{{vehiculo[3] }}" name="txtCorreo" id= "txtCorreo">
+    <br>
+    Imagenes:                           
+    <input type="file" value="{{vehiculo[4] }}" name="txtRol" id= "txtRol">
+    <br>
+    Precio por Dia:
+    <input type="text" value="{{vehiculo[5] }}" name="txtNombre" id= "txtNombre">
+    <br>
+    Capacidad de Personas:
+    <input type="text" value="{{vehiculo[6] }}" name="txtNombre" id= "txtNombre">
+    <br>
+    Tipo de Caja Manual:
+    <input type="checkbox" value="{{vehiculo[7] }}" name="txtNombre" id= "txtNombre">
+    <br>
+    Cantidad de Puertas:
+    <input type="text" value="{{vehiculo[8] }}" name="txtNombre" id= "txtNombre">
+    <br>
+    Tiene Aire Acondionado:
+    <input type="checkbox" value="{{vehiculo[9] }}" name="txtNombre" id= "txtNombre">
+    <br>
+    Kilometraje:
+    <input type="text" value="{{vehiculo[10] }}" name="txtNombre" id= "txtNombre">
+    <br>
+    Capacidad De Equipaje:
+    <input type="text" value="{{vehiculo[11] }}" name="txtNombre" id= "txtNombre">
+    <br>
+    <br>
+    <input type="submit" value="Editar">
+</form>
+
+{% endfor %}

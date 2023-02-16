@@ -1,0 +1,23 @@
+{% for usuario in usuarios %}
+
+<form method="post" action="/update" enctype="multipart/form-date">
+
+    <input type="text" value="{{usuario[0] }}" name="txtID" id= "txtID">
+    <br/>
+    Nombre:
+    <input type="text" value="{{usuario[1] }}" name="txtNombre" id= "txtNombre">
+    <br>
+    Apellido:
+    <input type="text" value="{{usuario[2] }}" name="txtApellido" id= "txtApellido">
+    <br>
+    Mail:
+    <input type="text" value="{{usuario[3] }}" name="txtCorreo" id= "txtCorreo">
+    <br>
+    Rol:
+    <input type="text" value="{{usuario[4] }}" name="txtRol" id= "txtRol">
+    <br>
+    <br>
+    <input type="submit" value="Editar">
+</form>
+
+{% endfor %}

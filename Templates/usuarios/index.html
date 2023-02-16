@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+  </head>
+  <body>
+
+  <table class="table table-light">
+    <thead class="thead-light">
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>Rol</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for usuario in usuarios %}
+      <tr>
+        <td>{{usuario[0] }}</td>
+        <td>{{usuario[1] }}</td>
+        <td>{{usuario[2] }}</td>
+        <td>{{usuario[3] }}</td>
+        <td>{{usuario[4] }}</td>
+        <td> <a href="/edit/{{usuario[0]}}">Editar</a>  |
+          <a href="/destroy/{{usuario[0]}}">Eliminar</a> 
+        </td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+  </body>
+</html>
+
